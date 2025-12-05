@@ -11,13 +11,13 @@ function calcularIMC() {
 
     if (imc < 18.5) {
         mensagem = "Abaixo do peso";
-        imagem = "/assets/magro.png"; 
+        imagem = "./assets/magro.png"; 
     } else if (imc <= 24.9) {
         mensagem = "Peso ideal";
-        imagem = "/assets/ideal.png";
+        imagem = "./assets/ideal.png";
     } else if (imc >= 25) {
         mensagem = "Sobrepeso / Obesidade";
-        imagem = "/assets/gordin.png";
+        imagem = "./assets/gordin.png";
     }
 
     resultado.innerHTML = `
