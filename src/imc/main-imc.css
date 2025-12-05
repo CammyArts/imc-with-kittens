@@ -1,0 +1,41 @@
+.container{
+    background-color: #D1E4D5;
+    padding: 1rem;
+    border-radius: 5%;
+    filter: drop-shadow(5px 5px 5px rgba(0, 65, 45, 0.356));
+    margin: 0.5rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#resultado {
+    width: 300px;
+}
+#resultado img {
+    width: 300px;
+    border-radius: 10%;
+    padding: 1rem;
+}
+input, label{
+    margin: 0px 7px 7px 0px;
+}
+input{
+    width: 100%;
+}
+.campos{
+    display: flex;
+    flex-direction: row;
+}
+button{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 5%;
+    background-color: #E7A573;
+    border: #E7A573;
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 800;
+    filter: drop-shadow(5px 5px 5px rgba(34, 11, 0, 0.5));
+}

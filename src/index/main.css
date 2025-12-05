@@ -1,0 +1,23 @@
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 277px;
+    padding: 1rem;
+    border-radius: 10%;
+}
+
+button{
+    margin-top: 0.5rem;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 5%;
+    background-color: #E7A573;
+    border: #E7A573;
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 800;
+    filter: drop-shadow(5px 5px 5px rgba(80, 25, 0, 0.5));
+}

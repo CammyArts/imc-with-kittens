@@ -1,0 +1,28 @@
+@import url(/src/index/main.css);
+@import url(/src/index/container.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;   /* Centraliza horizontal */
+    align-items: center;    
+    font-family: 'Comic Neue', sans-serif;
+    background-color: #FCFAED;
+    color: #643d20;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+@media (min-width: 646px){
+    img{
+        width: 35vw;
+
+    }
+}
+
