@@ -1,5 +1,5 @@
-@import url(./src/index/main.css);
-@import url(./src/index/container.css);
+@import url(/src/index/main.css);
+@import url(/src/index/container.css);
 *{
     margin: 0;
     padding: 0;

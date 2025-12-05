@@ -12,6 +12,7 @@ img{
 }
 
 button{
+    cursor: pointer;
     margin-top: 0.5rem;
     padding: 0.5rem 3rem 0.5rem 3rem;
     border-radius: 5%;
