@@ -1,34 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bebas+Neue&family=Bungee&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&family=Pirata+One&family=Titan+One&display=swap" rel="stylesheet">
-    <link rel="icon" href="/assets/logo.png">
-    <link rel="stylesheet" href="/src/imc/style-imc.css">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bebas+Neue&family=Bungee&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&family=Pirata+One&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="stylesheet" href="/src/imc/styleImc.css" />
     <title>Calcular IMC</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="container">
-            <div class="campos">
-            <label for="altura">Altura</label>
-            <input type="number" name="altura" id="altura" placeholder="Digite sua altura">
+      <div class="container">
+        <div class="campos">
+          <label for="altura">Altura</label>
+          <input
+            type="number"
+            name="altura"
+            id="altura"
+            placeholder="Digite sua altura"
+          />
         </div>
 
-    <div class="campos">
-        <label for="peso">Peso</label>
-        <input type="number" name="peso" id="peso" placeholder="Digite seu peso">
-    </div>
+        <div class="campos">
+          <label for="peso">Peso</label>
+          <input
+            type="number"
+            name="peso"
+            id="peso"
+            placeholder="Digite seu peso"
+          />
+        </div>
 
-    <button onclick="calcularIMC()">Calcular</button>
-    
-        <div id="resultado">
-        </div>
-        </div>
+        <button onclick="calcularIMC()">Calcular</button>
+
+        <div id="resultado"></div>
+      </div>
     </main>
     <script src="/src/imc/script.js"></script>
-</body>
+  </body>
 </html>
