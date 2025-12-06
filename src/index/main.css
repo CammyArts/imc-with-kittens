@@ -5,13 +5,13 @@ main{
     align-items: center;
 }
 
-img{
+main img{
     width: 277px;
     padding: 1rem;
     border-radius: 10%;
 }
 
-button{
+.botao{
     cursor: pointer;
     margin-top: 0.5rem;
     padding: 0.5rem 3rem 0.5rem 3rem;
