@@ -10,7 +10,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/assets/logo.png" />
-    <link rel="stylesheet" href="/src/imc/styleImc.css" />
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;   /* Centraliza horizontal */
+    align-items: center; 
+    font-family: 'Comic Neue', sans-serif;
+    background-color: #FCFAED;
+    color: #643d20;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    background-color: #D1E4D5;
+    padding: 1rem;
+    border-radius: 5%;
+    filter: drop-shadow(5px 5px 5px rgba(0, 65, 45, 0.356));
+    margin: 0.5rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#resultado {
+    width: 300px;
+}
+#resultado img {
+    width: 300px;
+    border-radius: 10%;
+    padding: 1rem;
+}
+input, label{
+    margin: 0px 7px 7px 0px;
+}
+input{
+    width: 100%;
+}
+.campos{
+    display: flex;
+    flex-direction: row;
+}
+button{
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 5%;
+    background-color: #E7A573;
+    border: #E7A573;
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 800;
+    filter: drop-shadow(5px 5px 5px rgba(34, 11, 0, 0.5));
+}
+    </style>
     <title>Calcular IMC</title>
   </head>
   <body>
@@ -41,6 +102,34 @@
         <div id="resultado"></div>
       </div>
     </main>
-    <script src="/src/imc/script.js"></script>
+    <script>
+        function calcularIMC() {
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altura = parseFloat(document.getElementById("altura").value);
+
+    const imc = peso / (altura * altura);
+
+    const resultado = document.getElementById("resultado");
+
+    let mensagem = "";
+    let imagem = "";
+
+    if (imc < 18.5) {
+        mensagem = "Abaixo do peso";
+        imagem = "/assets/magro.png"; 
+    } else if (imc <= 24.9) {
+        mensagem = "Peso ideal";
+        imagem = "/assets/ideal.png";
+    } else if (imc >= 25) {
+        mensagem = "Sobrepeso / Obesidade";
+        imagem = "/assets/gordin.png";
+    }
+
+    resultado.innerHTML = `
+        <p>IMC: ${imc.toFixed(2)} - ${mensagem}</p>
+        <img src="${imagem}" alt="imagem de gatinho" style="width: 300px;">
+    `;
+}
+    </script>
   </body>
 </html>
