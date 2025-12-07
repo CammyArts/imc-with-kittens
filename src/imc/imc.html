@@ -101,30 +101,32 @@
 
         <button onclick="calcularIMC()">Calcular</button>
 
-        <div id="resultado"></div>
+        <div id="resultado">
+          <p id="paragrafo"></p>
+          <img id="gatinho" src="/assets/todos.png" alt="imagem de gatinho" />
+        </div>
       </div>
     </main>
     <script>
       function calcularIMC() {
         const peso = parseFloat(document.getElementById("peso").value);
         const altura = parseFloat(document.getElementById("altura").value);
+        const img = document.getElementById("gatinho");
+        const p = document.getElementById("paragrafo");
         const resultado = document.getElementById("resultado");
 
-        // Limpa o conteúdo anterior com segurança
-        resultado.innerHTML = "";
+        // Limpa mensagens antigas
+        p.textContent = "";
+        img.src = "";
+        img.alt = "";
 
-        // Validação básica
+        // Validação
         if (isNaN(peso) || isNaN(altura) || altura <= 0) {
-          const erro = document.createElement("p");
-          erro.textContent = "Por favor, insira valores válidos.";
-          resultado.appendChild(erro);
+          p.textContent = "Por favor, insira valores válidos.";
           return;
         }
 
         const imc = peso / (altura * altura);
-
-        const p = document.createElement("p");
-        const img = document.createElement("img");
 
         if (imc < 18.5) {
           p.textContent = `Abaixo do peso (IMC: ${imc.toFixed(2)})`;
@@ -139,9 +141,6 @@
           img.src = "/assets/gordin.png";
           img.alt = "Sobrepeso";
         }
-
-        resultado.appendChild(p);
-        resultado.appendChild(img);
       }
     </script>
   </body>
