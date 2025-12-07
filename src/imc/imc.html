@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bebas+Neue&family=Bungee&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&family=Pirata+One&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/assets/logo.png" />
+    <link rel="icon" href="../../assets/logo.png" />
     <style>
       * {
         margin: 0;
@@ -103,7 +103,7 @@
 
         <div id="resultado">
           <p id="paragrafo"></p>
-          <img id="gatinho" src="/assets/todos.png" alt="imagem de gatinho" />
+          <img id="gatinho" src="../../assets/todos.png" alt="imagem de gatinho" />
         </div>
       </div>
     </main>
@@ -130,15 +130,15 @@
 
         if (imc < 18.5) {
           p.textContent = `Abaixo do peso (IMC: ${imc.toFixed(2)})`;
-          img.src = "/assets/magro.png";
+          img.src = "../../assets/magro.png";
           img.alt = "Abaixo do peso";
         } else if (imc <= 24.9) {
           p.textContent = `Peso ideal (IMC: ${imc.toFixed(2)})`;
-          img.src = "/assets/ideal.png";
+          img.src = "../../assets/ideal.png";
           img.alt = "Peso ideal";
         } else {
           p.textContent = `Sobrepeso / obeso (IMC: ${imc.toFixed(2)})`;
-          img.src = "/assets/gordin.png";
+          img.src = "../../assets/gordin.png";
           img.alt = "Sobrepeso";
         }
       }
