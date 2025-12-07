@@ -108,38 +108,40 @@
       function calcularIMC() {
         const peso = parseFloat(document.getElementById("peso").value);
         const altura = parseFloat(document.getElementById("altura").value);
+        const resultado = document.getElementById("resultado");
+
+        // Limpa o conteúdo anterior com segurança
+        resultado.innerHTML = "";
+
+        // Validação básica
+        if (isNaN(peso) || isNaN(altura) || altura <= 0) {
+          const erro = document.createElement("p");
+          erro.textContent = "Por favor, insira valores válidos.";
+          resultado.appendChild(erro);
+          return;
+        }
 
         const imc = peso / (altura * altura);
 
-        const resultado = document.getElementById("resultado");
-
-        let mensagem = "";
-        let imagem = "";
+        const p = document.createElement("p");
+        const img = document.createElement("img");
 
         if (imc < 18.5) {
-          mensagem = "Abaixo do peso";
-          imagem = "assets/magro.png";
-          resultado.innerHTML = `
-          <p>IMC: ${imc.toFixed(2)} - ${mensagem}</p>
-          <img src="${imagem}" alt="imagem de gatinho" style="width: 300px;">
-          `;
+          p.textContent = `Abaixo do peso (IMC: ${imc.toFixed(2)})`;
+          img.src = "/assets/magro.png";
+          img.alt = "Abaixo do peso";
         } else if (imc <= 24.9) {
-          mensagem = "Peso ideal";
-          imagem = "assets/ideal.png";
-          resultado.innerHTML = `
-        <p>IMC: ${imc.toFixed(2)} - ${mensagem}</p>
-        <img src="${imagem}" alt="imagem de gatinho" style="width: 300px;">
-    `;
-        } else if (imc >= 25) {
-          mensagem = "Sobrepeso / Obesidade";
-          imagem = "assets/gordin.png";
-          resultado.innerHTML = `
-        <p>IMC: ${imc.toFixed(2)} - ${mensagem}</p>
-        <img src="${imagem}" alt="imagem de gatinho" style="width: 300px;">
-    `;
+          p.textContent = `Peso ideal (IMC: ${imc.toFixed(2)})`;
+          img.src = "/assets/ideal.png";
+          img.alt = "Peso ideal";
+        } else {
+          p.textContent = `Sobrepeso / obeso (IMC: ${imc.toFixed(2)})`;
+          img.src = "/assets/gordin.png";
+          img.alt = "Sobrepeso";
         }
 
-        
+        resultado.appendChild(p);
+        resultado.appendChild(img);
       }
     </script>
   </body>
